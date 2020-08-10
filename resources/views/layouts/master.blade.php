@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="{{ asset('sbadmin2') }}/css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
@@ -51,39 +51,32 @@
 
       <!-- Heading -->
       <div class="sidebar-heading">
-        Interface
+        Master Data
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-          <i class="fas fa-fw fa-cog"></i>
-          <span>Components</span>
-        </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="buttons.html">Buttons</a>
-            <a class="collapse-item" href="cards.html">Cards</a>
-          </div>
-        </div>
+        <a class="nav-link" href="{{ route('managers.index') }}">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Manager</span></a>
       </li>
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-          <i class="fas fa-fw fa-wrench"></i>
-          <span>Utilities</span>
-        </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Utilities:</h6>
-            <a class="collapse-item" href="utilities-color.html">Colors</a>
-            <a class="collapse-item" href="utilities-border.html">Borders</a>
-            <a class="collapse-item" href="utilities-animation.html">Animations</a>
-            <a class="collapse-item" href="utilities-other.html">Other</a>
-          </div>
-        </div>
+        <a class="nav-link" href="{{ route('staffs.index') }}">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Staff</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route('projects.index') }}">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Project</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route('owner.project.index') }}">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>owner project</span></a>
       </li>
 
       <!-- Divider -->
@@ -333,6 +326,7 @@
 
           <!-- Page Heading -->
           <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
+          @yield('content')
 
         </div>
         <!-- /.container-fluid -->
@@ -381,19 +375,19 @@
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ asset('sbadmin2') }}/vendor/jquery/jquery.min.js"></script>
+  <script src="{{ asset('sbadmin2') }}/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="{{ asset('sbadmin2') }}/vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.min.js"></script>
+  <script src="{{ asset('sbadmin2') }}/js/sb-admin-2.min.js"></script>
 
   <!-- script tambahan sweet alert, bukan dari bawaan sb-admin-2 -->
   @stack('scripts')
 
-  <script src="js/swal.min.js"></script>
+  <script src="{{ asset('sbadmin2') }}/js/swal.min.js"></script>
 
 </body>
 
